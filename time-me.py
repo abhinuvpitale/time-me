@@ -1,5 +1,14 @@
 import pyaudio
 import wave
+import datetime
+
+def get_sound_by_hour():
+    hour = datetime.datetime.now().hour
+    if hour > 12:
+        hour = hour - 12
+    fname = (""+str(hour)+".wav")
+    print fname
+    return fname
 
 def play_file(fname):
     # create an audio object
@@ -26,4 +35,7 @@ def play_file(fname):
     stream.close()
     p.terminate() 
 
-play_file("/home/abhinuv/Projects/time-me/sample.wav")
+if __name__ == "__main__":
+#    fname = "0.wav"
+    fname = get_sound_by_hour()
+    play_file(fname)
