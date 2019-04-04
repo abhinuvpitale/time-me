@@ -37,5 +37,6 @@ def play_file(fname):
 
 if __name__ == "__main__":
 #    fname = "0.wav"
-    fname = get_sound_by_hour()
+    ABS_PATH = "/home/abhinuv/Projects/time-me/"
+    fname = ABS_PATH+get_sound_by_hour()
     play_file(fname)

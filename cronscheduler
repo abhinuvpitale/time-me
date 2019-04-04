@@ -1,0 +1,2 @@
+0 * * * * /path/to/python /path/to/time-me/time-me.py > /dev/null 2>&1
+
